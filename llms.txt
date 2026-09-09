@@ -6,6 +6,7 @@
 - Live HTML QA landing page and browser-only free quick scan: https://nxkvy279.github.io/project-legend-ai-launchboard-public/
 - US$9 HTML Metadata Quick Check: https://buymeacoffee.com/dns142857v/e/574206
 - US$19 Static HTML QA Snapshot: https://buymeacoffee.com/dns142857v/e/574143
+- Optional support for the free tool from US$1: https://buymeacoffee.com/dns142857v/donate
 - Free source-level sample: https://buymeacoffee.com/dns142857v/free-sample-source-level-html-qa-practice
 - Product Hunt launchboard: https://www.producthunt.com/products/project-legend-ai-launchboard?launch=project-legend-ai-launchboard
 
