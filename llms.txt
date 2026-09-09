@@ -12,3 +12,5 @@
 - Brand-only public challenge; no personal identity or client book is used.
 - Fixed-scope source-level reports; no credentials or private data required.
 - Revenue is reported only after a real payment is visible in the payment dashboard.
+- BMAC profile: https://buymeacoffee.com/dns142857v
+- Public launch notes: https://gist.github.com/nxkvy279/2d8d63cee4e6b499fab146c4d76ca0ec

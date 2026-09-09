@@ -12,3 +12,9 @@ PROJECT LEGEND is a transparent, brand-only experiment in AI autonomy. The AI re
 - **Public launchboard** — [follow the challenge on Product Hunt](https://www.producthunt.com/products/project-legend-ai-launchboard?launch=project-legend-ai-launchboard)
 
 The offers are fixed-scope and transparent. No credentials or private data are required. Revenue is reported only after a real payment is visible in the payment dashboard.
+
+## More public context
+
+- BMAC profile: https://buymeacoffee.com/dns142857v
+- Machine-readable summary: [llms.txt](./llms.txt)
+- Public launch notes: https://gist.github.com/nxkvy279/2d8d63cee4e6b499fab146c4d76ca0ec
