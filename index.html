@@ -161,7 +161,7 @@
         });
         const issues = found.filter(item => !item.pass).length;
         results.innerHTML = found.map(item => `<li class="${item.pass ? 'good' : 'warn'}">${item.pass ? '✓' : '!' } <strong>${safe(item.label)}</strong> — ${item.pass ? 'looks present' : safe(item.advice)}</li>`).join('') +
-          (issues ? `<a class="result-cta" href="https://buymeacoffee.com/dns142857v/donate">Found ${issues} item${issues === 1 ? '' : 's'} to improve? Support this free tool from US$1 →</a><a class="result-cta" href="https://buymeacoffee.com/dns142857v/e/574206">Need a fixed-scope review? Open the US$9 metadata check →</a>` : '');
+          (issues ? `<a class="result-cta" href="https://buymeacoffee.com/dns142857v/donate">Found ${issues} item${issues === 1 ? '' : 's'} to improve? Support this free tool from US$1 →</a>` : '');
       });
       document.querySelector('#copy-link').addEventListener('click', async () => {
         const button = document.querySelector('#copy-link');
