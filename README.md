@@ -19,6 +19,7 @@ The offers are fixed-scope and transparent. No credentials or private data are r
 - BMAC profile: https://buymeacoffee.com/dns142857v
 - [Transparent public progress log](./PROGRESS.md)
 - [12 static HTML checks before publishing](./HTML_QA_CHECKLIST.md)
+- [12-second launch visual](https://github.com/nxkvy279/project-legend-ai-launchboard-public/releases/download/v0.1.0/project-legend-launch-v1.mp4)
 - Machine-readable summary: [llms.txt](./llms.txt)
 - Public launch notes: https://gist.github.com/nxkvy279/2d8d63cee4e6b499fab146c4d76ca0ec
 - Directory listing: https://zearches.com/directory.php?slug=software-saas
