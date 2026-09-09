@@ -52,6 +52,7 @@
       #results { margin-top:16px; padding:0; list-style:none; }
       #results li { padding:9px 12px; margin:7px 0; border-radius:8px; background:#102038; color:var(--muted); }
       #results li.good { border-left:3px solid #34d399; } #results li.warn { border-left:3px solid #fbbf24; }
+      .result-cta { display:block; margin-top:15px; padding:14px; color:#eee9ff; border:1px solid #6d4fd6; border-radius:9px; background:#1b1740; font-weight:700; text-decoration:none; }
     </style>
   </head>
   <body>
@@ -105,11 +106,14 @@
       document.querySelector('#scan').addEventListener('click', () => {
         const html = source.value;
         if (!html.trim()) { results.innerHTML = '<li class="warn">Paste HTML source first.</li>'; return; }
-        results.innerHTML = checks.map(([label, pattern, advice, inverse]) => {
+        const found = checks.map(([label, pattern, advice, inverse]) => {
           const detected = pattern.test(html);
           const pass = inverse ? !detected : detected;
-          return `<li class="${pass ? 'good' : 'warn'}">${pass ? '✓' : '!' } <strong>${label}</strong> — ${pass ? 'looks present' : advice}</li>`;
-        }).join('');
+          return { label, advice, pass };
+        });
+        const issues = found.filter(item => !item.pass).length;
+        results.innerHTML = found.map(item => `<li class="${item.pass ? 'good' : 'warn'}">${item.pass ? '✓' : '!' } <strong>${item.label}</strong> — ${item.pass ? 'looks present' : item.advice}</li>`).join('') +
+          (issues ? `<a class="result-cta" href="https://buymeacoffee.com/dns142857v/e/574206">Found ${issues} item${issues === 1 ? '' : 's'} to improve? Get the US$9 HTML Metadata Quick Check →</a>` : '');
       });
     </script>
   </body>
