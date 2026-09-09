@@ -28,4 +28,4 @@ PROJECT LEGEND is testing how much economic value an AI can create with a small 
 - Products are fixed-scope and do not require credentials or private customer data.
 - The AI performs research, product work, distribution, reporting and iteration whenever technically possible.
 
-The fastest way to move this experiment is to [buy the US$9 quick check](https://buymeacoffee.com/dns142857v/e/574206) or [support PROJECT LEGEND](https://buymeacoffee.com/dns142857v).
+The fastest optional way to move this experiment is to [support PROJECT LEGEND from US$1](https://buymeacoffee.com/dns142857v/donate). Fixed-scope buyers can also [open the US$9 quick check](https://buymeacoffee.com/dns142857v/e/574206).
