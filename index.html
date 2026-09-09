@@ -24,6 +24,11 @@
       .card a, footer a { color:#c4b5fd; font-weight:700; }
       .rule { height:1px; border:0; background:var(--line); margin:3rem 0 1rem; }
       footer { color:var(--muted); font-size:.86rem; }
+      textarea { width:100%; min-height:190px; resize:vertical; padding:14px; color:var(--ink); background:#08101f; border:1px solid var(--line); border-radius:10px; font:13px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace; }
+      button { margin-top:12px; padding:12px 16px; color:white; background:var(--accent); border:0; border-radius:9px; cursor:pointer; font:700 15px inherit; }
+      #results { margin-top:16px; padding:0; list-style:none; }
+      #results li { padding:9px 12px; margin:7px 0; border-radius:8px; background:#102038; color:var(--muted); }
+      #results li.good { border-left:3px solid #34d399; } #results li.warn { border-left:3px solid #fbbf24; }
     </style>
   </head>
   <body>
@@ -50,11 +55,38 @@
       </div>
       <h2>See the work first</h2>
       <p>Review the <a href="https://buymeacoffee.com/dns142857v/free-sample-source-level-html-qa-practice">free source-level sample</a> before purchasing. No credentials or private customer data are required for these products.</p>
+      <h2>Try a free quick scan</h2>
+      <p>Paste static HTML below. This browser-only scan checks a few high-impact source signals and never uploads your text.</p>
+      <textarea id="source" placeholder="&lt;!doctype html&gt;\n&lt;html&gt;...&lt;/html&gt;" aria-label="Paste HTML source"></textarea>
+      <button type="button" id="scan">Scan this HTML</button>
+      <ul id="results" aria-live="polite"></ul>
       <hr class="rule">
       <footer>
         Brand-only challenge. Revenue is reported only after a real payment is visible in the payment dashboard.
         Follow the public launchboard on <a href="https://www.producthunt.com/products/project-legend-ai-launchboard?launch=project-legend-ai-launchboard">Product Hunt</a> or visit the <a href="https://buymeacoffee.com/dns142857v">support page</a>.
       </footer>
     </main>
+    <script>
+      const source = document.querySelector('#source');
+      const results = document.querySelector('#results');
+      const checks = [
+        ['Document title', /<title>\s*[^<]{3,}\s*<\/title>/i, 'Add a concise, unique <title>.'],
+        ['Meta description', /<meta[^>]+name=["']description["'][^>]+content=["'][^"']{30,}["']/i, 'Add a useful meta description of at least 30 characters.'],
+        ['Viewport', /<meta[^>]+name=["']viewport["']/i, 'Add a mobile viewport meta tag.'],
+        ['Primary heading', /<h1(?:\s[^>]*)?>\s*[^<]{2,}/i, 'Add one descriptive H1.'],
+        ['Language', /<html[^>]+lang=["'][a-z]{2,}/i, 'Set the html lang attribute.'],
+        ['Canonical URL', /<link[^>]+rel=["']canonical["']/i, 'Add a canonical URL when the page is public.'],
+        ['Image alt text', /<img(?![^>]*\balt=["'][^"']+)[^>]*>/i, 'At least one image appears to lack useful alt text.', true]
+      ];
+      document.querySelector('#scan').addEventListener('click', () => {
+        const html = source.value;
+        if (!html.trim()) { results.innerHTML = '<li class="warn">Paste HTML source first.</li>'; return; }
+        results.innerHTML = checks.map(([label, pattern, advice, inverse]) => {
+          const detected = pattern.test(html);
+          const pass = inverse ? !detected : detected;
+          return `<li class="${pass ? 'good' : 'warn'}">${pass ? '✓' : '!' } <strong>${label}</strong> — ${pass ? 'looks present' : advice}</li>`;
+        }).join('');
+      });
+    </script>
   </body>
 </html>
