@@ -21,6 +21,7 @@ Paste static HTML into the [PROJECT LEGEND browser-only quick scan](https://nxkv
 
 ## Need a fixed-scope review?
 
+- [Optional support for this free tool from US$1](https://buymeacoffee.com/dns142857v/donate)
 - [US$9 HTML Metadata Quick Check](https://buymeacoffee.com/dns142857v/e/574206)
 - [US$19 Static HTML QA Snapshot](https://buymeacoffee.com/dns142857v/e/574143)
 
