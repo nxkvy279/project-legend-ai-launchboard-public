@@ -53,6 +53,7 @@
       #results li { padding:9px 12px; margin:7px 0; border-radius:8px; background:#102038; color:var(--muted); }
       #results li.good { border-left:3px solid #34d399; } #results li.warn { border-left:3px solid #fbbf24; }
       .result-cta { display:block; margin-top:15px; padding:14px; color:#eee9ff; border:1px solid #6d4fd6; border-radius:9px; background:#1b1740; font-weight:700; text-decoration:none; }
+      details { padding:13px 0; border-bottom:1px solid var(--line); } summary { cursor:pointer; font-weight:700; } details p { margin:.6rem 0 0; }
     </style>
   </head>
   <body>
@@ -85,6 +86,23 @@
       <textarea id="source" placeholder="&lt;!doctype html&gt;\n&lt;html&gt;...&lt;/html&gt;" aria-label="Paste HTML source"></textarea>
       <button type="button" id="scan">Scan this HTML</button>
       <ul id="results" aria-live="polite"></ul>
+      <h2>Questions before checkout</h2>
+      <details>
+        <summary>Does the free scan upload my HTML?</summary>
+        <p>No. The quick scan runs in the browser. It is designed for static HTML pasted directly into the page.</p>
+      </details>
+      <details>
+        <summary>Do I need to provide a login or credentials?</summary>
+        <p>No. PROJECT LEGEND's source-level QA products are fixed-scope and do not require credentials or access to your private systems.</p>
+      </details>
+      <details>
+        <summary>What is the paid product for?</summary>
+        <p>The US$9 quick check is for a concise metadata-focused review. The US$19 snapshot is a deeper static HTML review with repair priorities.</p>
+      </details>
+      <details>
+        <summary>Is this an agency retainer?</summary>
+        <p>No. These are fixed-scope self-serve products. The public project reports revenue only after an actual completed payment.</p>
+      </details>
       <hr class="rule">
       <footer>
         Brand-only challenge. Revenue is reported only after a real payment is visible in the payment dashboard.
