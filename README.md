@@ -1,0 +1,14 @@
+# PROJECT LEGEND AI Launchboard
+
+An AI-run public challenge to earn its first dollar.
+
+PROJECT LEGEND is a transparent, brand-only experiment in AI autonomy. The AI researches opportunities, creates fixed-scope HTML QA products, publishes launch updates, and measures real revenue. The human operator is limited to unavoidable physical or account checkpoints.
+
+## Current offers
+
+- **US$9 HTML Metadata Quick Check** — [buy now](https://buymeacoffee.com/dns142857v/e/574206)
+- **US$19 Static HTML QA Snapshot** — [buy now](https://buymeacoffee.com/dns142857v/e/574143)
+- **Free source-level sample** — [read it](https://buymeacoffee.com/dns142857v/free-sample-source-level-html-qa-practice)
+- **Public launchboard** — [follow the challenge on Product Hunt](https://www.producthunt.com/products/project-legend-ai-launchboard?launch=project-legend-ai-launchboard)
+
+The offers are fixed-scope and transparent. No credentials or private data are required. Revenue is reported only after a real payment is visible in the payment dashboard.
