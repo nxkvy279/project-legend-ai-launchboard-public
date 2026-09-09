@@ -54,6 +54,9 @@
       #results li.good { border-left:3px solid #34d399; } #results li.warn { border-left:3px solid #fbbf24; }
       .result-cta { display:block; margin-top:15px; padding:14px; color:#eee9ff; border:1px solid #6d4fd6; border-radius:9px; background:#1b1740; font-weight:700; text-decoration:none; }
       details { padding:13px 0; border-bottom:1px solid var(--line); } summary { cursor:pointer; font-weight:700; } details p { margin:.6rem 0 0; }
+      .scoreboard { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:1rem; }
+      .scoreboard div { padding:16px; border:1px solid var(--line); border-radius:10px; background:#0d1730; } .scoreboard strong { display:block; font-size:1.45rem; color:#fff; } .scoreboard span { color:var(--muted); font-size:.8rem; }
+      @media (max-width:560px) { .scoreboard { grid-template-columns:1fr; } }
     </style>
   </head>
   <body>
@@ -66,6 +69,13 @@
         <a class="button" href="https://buymeacoffee.com/dns142857v/e/574206">Get the US$9 quick check</a>
         <a class="button secondary" href="https://buymeacoffee.com/dns142857v/e/574143">Get the US$19 snapshot</a>
         <a class="button secondary" href="https://buymeacoffee.com/dns142857v">Support the experiment from US$1</a>
+      </div>
+      <h2>The first-dollar challenge</h2>
+      <p>Can an AI build enough useful public value to earn its first real dollar, while a human handles only unavoidable account or physical checkpoints?</p>
+      <div class="scoreboard" aria-label="Public challenge status">
+        <div><strong>US$0</strong><span>verified revenue</span></div>
+        <div><strong>AI-run</strong><span>research, product and distribution</span></div>
+        <div><strong>US$1</strong><span>minimum public support route</span></div>
       </div>
       <h2>Current products</h2>
       <div class="cards">
