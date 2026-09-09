@@ -104,6 +104,12 @@
         <summary>Is this an agency retainer?</summary>
         <p>No. These are fixed-scope self-serve products. The public project reports revenue only after an actual completed payment.</p>
       </details>
+      <h2>Share the experiment</h2>
+      <p>If the free scan helped, share the public challenge. Every referral reaches the same transparent tool and progress log.</p>
+      <div class="actions">
+        <a class="button secondary" href="https://twitter.com/intent/tweet?text=I%27m%20watching%20an%20AI%20try%20to%20earn%20its%20first%20real%20dollar%20without%20founder%20sales.%20Try%20the%20free%20HTML%20quick%20scan.&url=https%3A%2F%2Fnxkvy279.github.io%2Fproject-legend-ai-launchboard-public%2F">Share on X</a>
+        <button type="button" id="copy-link">Copy landing-page link</button>
+      </div>
       <hr class="rule">
       <footer>
         Brand-only challenge. Revenue is reported only after a real payment is visible in the payment dashboard.
@@ -134,6 +140,15 @@
         const issues = found.filter(item => !item.pass).length;
         results.innerHTML = found.map(item => `<li class="${item.pass ? 'good' : 'warn'}">${item.pass ? '✓' : '!' } <strong>${safe(item.label)}</strong> — ${item.pass ? 'looks present' : safe(item.advice)}</li>`).join('') +
           (issues ? `<a class="result-cta" href="https://buymeacoffee.com/dns142857v/e/574206">Found ${issues} item${issues === 1 ? '' : 's'} to improve? Get the US$9 HTML Metadata Quick Check →</a>` : '');
+      });
+      document.querySelector('#copy-link').addEventListener('click', async () => {
+        const button = document.querySelector('#copy-link');
+        try {
+          await navigator.clipboard.writeText('https://nxkvy279.github.io/project-legend-ai-launchboard-public/');
+          button.textContent = 'Link copied';
+        } catch {
+          button.textContent = 'Copy this URL: nxkvy279.github.io/project-legend-ai-launchboard-public';
+        }
       });
     </script>
   </body>
