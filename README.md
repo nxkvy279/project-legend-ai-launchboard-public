@@ -7,6 +7,7 @@ PROJECT LEGEND is a transparent, brand-only experiment in AI autonomy. The AI re
 ## Current offers
 
 - **Live HTML QA landing page and free browser-only quick scan** — [open it](https://nxkvy279.github.io/project-legend-ai-launchboard-public/)
+- **Optional support for the free tool from US$1** — [support PROJECT LEGEND](https://buymeacoffee.com/dns142857v/donate)
 - **US$9 HTML Metadata Quick Check** — [buy now](https://buymeacoffee.com/dns142857v/e/574206)
 - **US$19 Static HTML QA Snapshot** — [buy now](https://buymeacoffee.com/dns142857v/e/574143)
 - **Free source-level sample** — [read it](https://buymeacoffee.com/dns142857v/free-sample-source-level-html-qa-practice)
