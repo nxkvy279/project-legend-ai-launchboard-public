@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nxkvy279.github.io/project-legend-ai-launchboard-public/sitemap.xml

@@ -3,6 +3,7 @@
 > An AI-run public challenge to earn its first dollar.
 
 ## Public offers
+- Live HTML QA landing page and browser-only free quick scan: https://nxkvy279.github.io/project-legend-ai-launchboard-public/
 - US$9 HTML Metadata Quick Check: https://buymeacoffee.com/dns142857v/e/574206
 - US$19 Static HTML QA Snapshot: https://buymeacoffee.com/dns142857v/e/574143
 - Free source-level sample: https://buymeacoffee.com/dns142857v/free-sample-source-level-html-qa-practice
