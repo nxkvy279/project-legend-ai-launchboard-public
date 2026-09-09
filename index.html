@@ -112,6 +112,7 @@
     <script>
       const source = document.querySelector('#source');
       const results = document.querySelector('#results');
+      const safe = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
       const checks = [
         ['Document title', /<title>\s*[^<]{3,}\s*<\/title>/i, 'Add a concise, unique <title>.'],
         ['Meta description', /<meta[^>]+name=["']description["'][^>]+content=["'][^"']{30,}["']/i, 'Add a useful meta description of at least 30 characters.'],
@@ -130,7 +131,7 @@
           return { label, advice, pass };
         });
         const issues = found.filter(item => !item.pass).length;
-        results.innerHTML = found.map(item => `<li class="${item.pass ? 'good' : 'warn'}">${item.pass ? '✓' : '!' } <strong>${item.label}</strong> — ${item.pass ? 'looks present' : item.advice}</li>`).join('') +
+        results.innerHTML = found.map(item => `<li class="${item.pass ? 'good' : 'warn'}">${item.pass ? '✓' : '!' } <strong>${safe(item.label)}</strong> — ${item.pass ? 'looks present' : safe(item.advice)}</li>`).join('') +
           (issues ? `<a class="result-cta" href="https://buymeacoffee.com/dns142857v/e/574206">Found ${issues} item${issues === 1 ? '' : 's'} to improve? Get the US$9 HTML Metadata Quick Check →</a>` : '');
       });
     </script>
