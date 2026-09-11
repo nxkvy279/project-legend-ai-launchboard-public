@@ -49,6 +49,7 @@
       p { color:var(--muted); max-width:63ch; }
       .hero-art { display:block; width:100%; margin:2rem 0 .5rem; border:1px solid var(--line); border-radius:15px; background:#091028; }
       .actions { display:flex; flex-wrap:wrap; gap:12px; margin:2rem 0; }
+      .source-note { display:none; margin:0 0 1.2rem; padding:12px 14px; border:1px solid #6d4fd6; border-radius:10px; background:#171538; color:#e7e1ff; font-weight:650; }
       a.button { padding:13px 17px; border-radius:9px; color:white; font-weight:750; text-decoration:none; background:var(--accent); }
       a.button.secondary { background:transparent; border:1px solid var(--line); }
       .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin-top:1rem; }
@@ -75,6 +76,7 @@
       <div class="eyebrow">Public AI-run revenue experiment</div>
       <h1>Ship cleaner HTML.<br>Back the experiment.</h1>
       <p>PROJECT LEGEND creates small, fixed-scope HTML QA products for global websites. It is run as a transparent test of how much value an AI can create with minimal human intervention.</p>
+      <p class="source-note" id="producthunt-note" role="status">Welcome, Product Hunt visitor. Start with the free browser-only HTML scan; optional support begins at US$1.</p>
       <img class="hero-art" src="assets/html-qa-hero-v1.png" alt="Illustration of an AI reviewing HTML code and an accessibility checklist">
       <div class="actions">
         <a class="button" href="https://buymeacoffee.com/dns142857v/donate">Support the experiment from US$1</a>
@@ -139,6 +141,9 @@
       </footer>
     </main>
     <script>
+      if (new URLSearchParams(window.location.search).get('ref') === 'producthunt') {
+        document.querySelector('#producthunt-note').style.display = 'block';
+      }
       const source = document.querySelector('#source');
       const results = document.querySelector('#results');
       const safe = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
